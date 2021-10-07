@@ -35,12 +35,34 @@ public class LinkedList {
             first = node;
             last = node;
         } else {
-            node.next = last;
+            last.next = node;
             last = node;
         }
 //        System.out.println("["+first+"->"+node.next+"->"+last);
     }
 
+    public void _addFirst(int item) {
+        var node = new Node(item);
+        if (first == null) {
+            first = node;
+            last = node;
+        } else {
+            node.next = first;
+            first = node;
+        }
+    }
+
+    public void _addLast(int item) {
+        var node = new Node(item);
+        if (first == null) {
+            first = node;
+            last = node;
+        } else {
+            last.next = node;
+            last = node;
+        }
+
+    }
 
     public void deleteFirst() {
 
@@ -54,7 +76,14 @@ public class LinkedList {
 
     }
 
-    public void indexOf() {
-
+    public int indexOf(int item) {
+        int index = 0;
+        var current = first;
+        while (current != null) {
+            if (current.value == item) return index;
+            current = current.next;
+            index++;
+        }
+        return -1;
     }
 }

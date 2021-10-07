@@ -7,7 +7,9 @@ public class Main {
         linkedList.addLast(22);
         linkedList.addLast(32);
         linkedList.addLast(42);
-        linkedList.addFirst(50);
+        //linkedList.addFirst(50);
+
+        System.out.println(linkedList.indexOf(12));
 
     }
 }
