@@ -3,13 +3,13 @@ public class Main {
 //     Array array = new Array(5);
 //     array.runMethods(array);
         var linkedList = new LinkedList();
-        linkedList.addLast(12);
-        linkedList.addLast(22);
-        linkedList.addLast(32);
-        linkedList.addLast(42);
+        linkedList.addToTail(12);
+        linkedList.addToTail(22);
+        linkedList.addToTail(32);
+        linkedList.addToTail(42);
         //linkedList.addFirst(50);
 
-        System.out.println(linkedList.indexOf(12));
+        System.out.println(linkedList.getIndex(12));
 
     }
 }
