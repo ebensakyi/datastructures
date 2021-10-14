@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 //     Array array = new Array(5);
@@ -9,7 +11,8 @@ public class Main {
         linkedList.addToTail(42);
         //linkedList.addFirst(50);
 
-        System.out.println(linkedList.getIndex(12));
-
+//        System.out.println(linkedList.getIndex(12));
+        linkedList.reverse();
+        System.out.println(Arrays.toString(linkedList.toArray()));
     }
 }

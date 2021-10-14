@@ -126,4 +126,23 @@ public class LinkedList {
         return null;
     }
 
+    public void reverse() {
+        //43-->54-->12-->23--90
+        //p    c     n
+        var previous = first;
+        var current = first.next;
+
+        last = first;
+        last.next = null;
+        while (current != null) {
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+
+        }
+        first = previous;
+
+    }
+
 }
