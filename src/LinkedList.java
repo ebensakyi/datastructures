@@ -145,4 +145,27 @@ public class LinkedList {
 
     }
 
+
+    public void _reverse() {
+        //1-->2-->3-->4-->5
+        //P   C   N
+        //    p   C   N
+        //        P   C   N
+        //            P   C   N
+        //                P   C   N
+
+        var prev = first;
+        var current = first.next;
+        last = first;
+        last.next = null;
+        while (current != null) {
+            var next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+
+        }
+        first = prev;
+
+    }
 }

@@ -12,7 +12,7 @@ public class Main {
         //linkedList.addFirst(50);
 
 //        System.out.println(linkedList.getIndex(12));
-        linkedList.reverse();
+        linkedList._reverse();
         System.out.println(Arrays.toString(linkedList.toArray()));
     }
 }
